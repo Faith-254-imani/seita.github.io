@@ -331,7 +331,8 @@
                 </div>
             </div>
             <div class="profile-circle mx-auto lg:mx-0">
-                <img src="Passport.png" alt="Faith Seita Portrait">
+                <!-- High priority for main portrait -->
+                <img src="Passport.png" alt="Faith Seita Portrait" fetchpriority="high" loading="eager">
             </div>
         </div>
     </div>
@@ -354,26 +355,27 @@
                     <div class="slider-container" id="slider1">
                         <div class="slider-slides">
                             <div class="slider-slide">
+                                <!-- FIRST SLIDE: HIGH PRIORITY -->
                                 <video autoplay muted loop playsinline preload="metadata" poster="https://via.placeholder.com/1600x900/333/fff?text=Raw+Data">
-                                    <source src="raw_data.mp4" type="video/mp4">
+                                    <source src="raw_data.mp4" type="video/mp4" fetchpriority="high">
                                 </video>
                                 <span class="slide-label">Raw Messy Data</span>
                             </div>
                             <div class="slider-slide">
-                                <video autoplay muted loop playsinline preload="metadata" poster="https://via.placeholder.com/1600x900/333/fff?text=Python+Code">
-                                    <!-- UPDATED filename with space -->
+                                <!-- SLOWER SLIDES: preload="none" + lazy -->
+                                <video autoplay muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Python+Code">
                                     <source src="python-datacleaning-code .mp4" type="video/mp4">
                                 </video>
                                 <span class="slide-label">Python Code for Cleaning</span>
                             </div>
                             <div class="slider-slide">
-                                <video autoplay muted loop playsinline preload="metadata" poster="https://via.placeholder.com/1600x900/333/fff?text=Cleaned+Data">
+                                <video autoplay muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Cleaned+Data">
                                     <source src="cleaned-data.mp4" type="video/mp4">
                                 </video>
                                 <span class="slide-label">Cleaned Data</span>
                             </div>
                             <div class="slider-slide">
-                                <img src="Kamis Cattle Dashboard.png" alt="Kamis Cattle Dashboard">
+                                <img src="Kamis Cattle Dashboard.png" alt="Kamis Cattle Dashboard" loading="lazy">
                                 <span class="slide-label">Kamis Cattle Dashboard</span>
                             </div>
                         </div>
@@ -420,13 +422,14 @@
                     <div class="slider-container" id="slider2">
                         <div class="slider-slides">
                             <div class="slider-slide">
+                                <!-- FIRST SLIDE: HIGH PRIORITY -->
                                 <video autoplay muted loop playsinline preload="metadata" poster="https://via.placeholder.com/1600x900/333/fff?text=Clean+Finance+Data">
-                                    <source src="Personal Finance Clean.mp4" type="video/mp4">
+                                    <source src="Personal Finance Clean.mp4" type="video/mp4" fetchpriority="high">
                                 </video>
                                 <span class="slide-label">Clean Finance Data</span>
                             </div>
                             <div class="slider-slide">
-                                <img src="Personal Finance Dashboard.png" alt="Personal Finance Dashboard">
+                                <img src="Personal Finance Dashboard.png" alt="Personal Finance Dashboard" loading="lazy">
                                 <span class="slide-label">Finance Dashboard</span>
                             </div>
                         </div>
@@ -473,8 +476,9 @@
                     <div class="slider-container" id="slider3">
                         <div class="slider-slides">
                             <div class="slider-slide">
+                                <!-- FIRST SLIDE: HIGH PRIORITY -->
                                 <video controls muted loop playsinline preload="metadata" poster="https://via.placeholder.com/1600x900/333/fff?text=JAKE+Financial+Demo">
-                                    <source src="Financial Management System.mp4" type="video/mp4">
+                                    <source src="Financial Management System.mp4" type="video/mp4" fetchpriority="high">
                                     Your browser does not support the video tag.
                                 </video>
                                 <span class="slide-label">Financial Management System Demo</span>
@@ -521,7 +525,8 @@
             <!-- ===== PROJECT 4 – Employee Attrition ===== -->
             <div class="project-card">
                 <div class="project-image" onclick="openLightboxFromImage(this.querySelector('img'))">
-                    <img src="Employee-Attrition-Analysis.png" alt="Employee Attrition Dashboard">
+                    <!-- HIGH PRIORITY single image -->
+                    <img src="Employee-Attrition-Analysis.png" alt="Employee Attrition Dashboard" fetchpriority="high" loading="eager">
                 </div>
                 <div class="p-6 sm:p-8">
                     <div class="flex flex-wrap items-center gap-3 mb-2">
