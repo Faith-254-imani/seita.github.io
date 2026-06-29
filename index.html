@@ -169,33 +169,6 @@
             max-width: calc(100% - 20px);
         }
 
-        .video-play-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0,0,0,0.3);
-            cursor: pointer;
-            z-index: 5;
-            transition: opacity 0.3s;
-        }
-        .video-play-overlay svg {
-            width: 60px;
-            height: 60px;
-            fill: white;
-            opacity: 0.9;
-            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
-            transition: transform 0.2s;
-        }
-        .video-play-overlay:hover svg {
-            transform: scale(1.1);
-            opacity: 1;
-        }
-        .video-play-overlay.hidden {
-            display: none;
-        }
-
         .slider-dots {
             position: absolute;
             bottom: 10px;
@@ -309,10 +282,6 @@
                 font-size: 30px;
                 padding: 5px;
             }
-            .video-play-overlay svg {
-                width: 45px;
-                height: 45px;
-            }
         }
     </style>
 </head>
@@ -362,7 +331,7 @@
                 </div>
             </div>
             <div class="profile-circle mx-auto lg:mx-0">
-                <img src="Passport.png" alt="Faith Seita Portrait" fetchpriority="high" loading="eager">
+                <img src="Passport.png" alt="Faith Seita Portrait">
             </div>
         </div>
     </div>
@@ -384,38 +353,26 @@
                 <div class="project-image">
                     <div class="slider-container" id="slider1">
                         <div class="slider-slides">
-                            <div class="slider-slide" data-slide-type="video">
-                                <video muted loop playsinline preload="none"
-                                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Crect width='1600' height='900' fill='%23333'/%3E%3Ctext x='800' y='450' text-anchor='middle' fill='%23fff' font-family='Inter,sans-serif' font-size='40'%3ERaw Messy Data%3C/text%3E%3C/svg%3E">
+                            <div class="slider-slide">
+                                <video autoplay muted loop playsinline preload="metadata">
                                     <source src="raw_data.mp4" type="video/mp4">
                                 </video>
-                                <div class="video-play-overlay" onclick="playVideoInline(this)">
-                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                </div>
                                 <span class="slide-label">Raw Messy Data</span>
                             </div>
-                            <div class="slider-slide" data-slide-type="video">
-                                <video muted loop playsinline preload="none"
-                                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Crect width='1600' height='900' fill='%23333'/%3E%3Ctext x='800' y='450' text-anchor='middle' fill='%23fff' font-family='Inter,sans-serif' font-size='40'%3EPython Cleaning Code%3C/text%3E%3C/svg%3E">
+                            <div class="slider-slide">
+                                <video autoplay muted loop playsinline preload="metadata">
                                     <source src="python-datacleaning-code .mp4" type="video/mp4">
                                 </video>
-                                <div class="video-play-overlay" onclick="playVideoInline(this)">
-                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                </div>
                                 <span class="slide-label">Python Code for Cleaning</span>
                             </div>
-                            <div class="slider-slide" data-slide-type="video">
-                                <video muted loop playsinline preload="none"
-                                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Crect width='1600' height='900' fill='%23333'/%3E%3Ctext x='800' y='450' text-anchor='middle' fill='%23fff' font-family='Inter,sans-serif' font-size='40'%3ECleaned Data%3C/text%3E%3C/svg%3E">
+                            <div class="slider-slide">
+                                <video autoplay muted loop playsinline preload="metadata">
                                     <source src="cleaned-data.mp4" type="video/mp4">
                                 </video>
-                                <div class="video-play-overlay" onclick="playVideoInline(this)">
-                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                </div>
                                 <span class="slide-label">Cleaned Data</span>
                             </div>
-                            <div class="slider-slide" data-slide-type="image">
-                                <img src="Kamis Cattle Dashboard.png" alt="Kamis Cattle Dashboard" loading="lazy">
+                            <div class="slider-slide">
+                                <img src="Kamis Cattle Dashboard.png" alt="Kamis Cattle Dashboard">
                                 <span class="slide-label">Kamis Cattle Dashboard</span>
                             </div>
                         </div>
@@ -461,18 +418,14 @@
                 <div class="project-image">
                     <div class="slider-container" id="slider2">
                         <div class="slider-slides">
-                            <div class="slider-slide" data-slide-type="video">
-                                <video muted loop playsinline preload="none"
-                                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Crect width='1600' height='900' fill='%23333'/%3E%3Ctext x='800' y='450' text-anchor='middle' fill='%23fff' font-family='Inter,sans-serif' font-size='40'%3EClean Finance Data%3C/text%3E%3C/svg%3E">
+                            <div class="slider-slide">
+                                <video autoplay muted loop playsinline preload="metadata">
                                     <source src="Personal Finance Clean.mp4" type="video/mp4">
                                 </video>
-                                <div class="video-play-overlay" onclick="playVideoInline(this)">
-                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                </div>
                                 <span class="slide-label">Clean Finance Data</span>
                             </div>
-                            <div class="slider-slide" data-slide-type="image">
-                                <img src="Personal Finance Dashboard.png" alt="Personal Finance Dashboard" loading="lazy">
+                            <div class="slider-slide">
+                                <img src="Personal Finance Dashboard.png" alt="Personal Finance Dashboard">
                                 <span class="slide-label">Finance Dashboard</span>
                             </div>
                         </div>
@@ -518,14 +471,11 @@
                 <div class="project-image">
                     <div class="slider-container" id="slider3">
                         <div class="slider-slides">
-                            <div class="slider-slide" data-slide-type="video">
-                                <video muted loop playsinline preload="none"
-                                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Crect width='1600' height='900' fill='%23333'/%3E%3Ctext x='800' y='450' text-anchor='middle' fill='%23fff' font-family='Inter,sans-serif' font-size='40'%3EFinancial System Demo%3C/text%3E%3C/svg%3E">
+                            <div class="slider-slide">
+                                <video controls muted loop playsinline preload="metadata">
                                     <source src="Financial Management System.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
                                 </video>
-                                <div class="video-play-overlay" onclick="playVideoInline(this)">
-                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                </div>
                                 <span class="slide-label">Financial Management System Demo</span>
                             </div>
                         </div>
@@ -570,7 +520,7 @@
             <!-- ===== PROJECT 4 – Employee Attrition ===== -->
             <div class="project-card">
                 <div class="project-image" onclick="openLightboxFromImage(this.querySelector('img'))">
-                    <img src="Employee-Attrition-Analysis.png" alt="Employee Attrition Dashboard" fetchpriority="high" loading="eager">
+                    <img src="Employee-Attrition-Analysis.png" alt="Employee Attrition Dashboard">
                 </div>
                 <div class="p-6 sm:p-8">
                     <div class="flex flex-wrap items-center gap-3 mb-2">
@@ -734,18 +684,6 @@
 
 <!-- ==================== SCRIPTS ==================== -->
 <script>
-    // ---------- Click-to-play inline video ----------
-    function playVideoInline(overlay) {
-        const slide = overlay.parentElement;
-        const video = slide.querySelector('video');
-        if (!video) return;
-        // Load and play
-        video.preload = 'auto';
-        video.load();
-        video.play().catch(() => {});
-        overlay.classList.add('hidden');
-    }
-
     // Count-up animation
     document.addEventListener('DOMContentLoaded', function () {
         const counters = document.querySelectorAll('.countup');
@@ -837,7 +775,7 @@
         if (Math.abs(diff) > 50) navigateLightbox(diff > 0 ? 1 : -1);
     });
 
-    // ---------- Sliders (updated for click-to-play) ----------
+    // Sliders
     function initSlider(sliderId) {
         const container = document.getElementById(sliderId);
         if (!container) return;
@@ -918,7 +856,7 @@
         const slideElements = slides.querySelectorAll('.slider-slide');
         slideElements.forEach((slide, index) => {
             slide.addEventListener('click', function(e) {
-                if (e.target.closest('.video-play-overlay')) return;
+                if (e.target.closest('button')) return;
                 openLightbox(getMediaList(), index);
             });
         });
