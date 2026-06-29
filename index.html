@@ -169,7 +169,6 @@
             max-width: calc(100% - 20px);
         }
 
-        /* ---------- PLAY BUTTON OVERLAY ---------- */
         .video-play-overlay {
             position: absolute;
             inset: 0;
@@ -385,9 +384,9 @@
                 <div class="project-image">
                     <div class="slider-container" id="slider1">
                         <div class="slider-slides">
-                            <!-- Slide 1: Raw Data Video -->
                             <div class="slider-slide" data-slide-type="video">
-                                <video muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Raw+Data">
+                                <video muted loop playsinline preload="none"
+                                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Crect width='1600' height='900' fill='%23333'/%3E%3Ctext x='800' y='450' text-anchor='middle' fill='%23fff' font-family='Inter,sans-serif' font-size='40'%3ERaw Messy Data%3C/text%3E%3C/svg%3E">
                                     <source src="raw_data.mp4" type="video/mp4">
                                 </video>
                                 <div class="video-play-overlay" onclick="playVideoInline(this)">
@@ -395,9 +394,9 @@
                                 </div>
                                 <span class="slide-label">Raw Messy Data</span>
                             </div>
-                            <!-- Slide 2: Python Code Video -->
                             <div class="slider-slide" data-slide-type="video">
-                                <video muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Python+Code">
+                                <video muted loop playsinline preload="none"
+                                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Crect width='1600' height='900' fill='%23333'/%3E%3Ctext x='800' y='450' text-anchor='middle' fill='%23fff' font-family='Inter,sans-serif' font-size='40'%3EPython Cleaning Code%3C/text%3E%3C/svg%3E">
                                     <source src="python-datacleaning-code .mp4" type="video/mp4">
                                 </video>
                                 <div class="video-play-overlay" onclick="playVideoInline(this)">
@@ -405,9 +404,9 @@
                                 </div>
                                 <span class="slide-label">Python Code for Cleaning</span>
                             </div>
-                            <!-- Slide 3: Cleaned Data Video -->
                             <div class="slider-slide" data-slide-type="video">
-                                <video muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Cleaned+Data">
+                                <video muted loop playsinline preload="none"
+                                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Crect width='1600' height='900' fill='%23333'/%3E%3Ctext x='800' y='450' text-anchor='middle' fill='%23fff' font-family='Inter,sans-serif' font-size='40'%3ECleaned Data%3C/text%3E%3C/svg%3E">
                                     <source src="cleaned-data.mp4" type="video/mp4">
                                 </video>
                                 <div class="video-play-overlay" onclick="playVideoInline(this)">
@@ -415,7 +414,6 @@
                                 </div>
                                 <span class="slide-label">Cleaned Data</span>
                             </div>
-                            <!-- Slide 4: Image -->
                             <div class="slider-slide" data-slide-type="image">
                                 <img src="Kamis Cattle Dashboard.png" alt="Kamis Cattle Dashboard" loading="lazy">
                                 <span class="slide-label">Kamis Cattle Dashboard</span>
@@ -427,7 +425,6 @@
                     </div>
                 </div>
                 <div class="p-6 sm:p-8">
-                    <!-- Project 1 details unchanged -->
                     <div class="flex flex-wrap items-center gap-3 mb-2">
                         <span class="bg-earth/10 text-earth text-xs font-bold px-3 py-1 rounded-full">Python</span>
                         <span class="bg-forest/10 text-forest text-xs font-bold px-3 py-1 rounded-full">Data Cleaning</span>
@@ -465,7 +462,8 @@
                     <div class="slider-container" id="slider2">
                         <div class="slider-slides">
                             <div class="slider-slide" data-slide-type="video">
-                                <video muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Clean+Finance+Data">
+                                <video muted loop playsinline preload="none"
+                                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Crect width='1600' height='900' fill='%23333'/%3E%3Ctext x='800' y='450' text-anchor='middle' fill='%23fff' font-family='Inter,sans-serif' font-size='40'%3EClean Finance Data%3C/text%3E%3C/svg%3E">
                                     <source src="Personal Finance Clean.mp4" type="video/mp4">
                                 </video>
                                 <div class="video-play-overlay" onclick="playVideoInline(this)">
@@ -521,7 +519,8 @@
                     <div class="slider-container" id="slider3">
                         <div class="slider-slides">
                             <div class="slider-slide" data-slide-type="video">
-                                <video muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=JAKE+Financial+Demo">
+                                <video muted loop playsinline preload="none"
+                                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Crect width='1600' height='900' fill='%23333'/%3E%3Ctext x='800' y='450' text-anchor='middle' fill='%23fff' font-family='Inter,sans-serif' font-size='40'%3EFinancial System Demo%3C/text%3E%3C/svg%3E">
                                     <source src="Financial Management System.mp4" type="video/mp4">
                                 </video>
                                 <div class="video-play-overlay" onclick="playVideoInline(this)">
@@ -888,7 +887,6 @@
             if (newVideo) {
                 clearInterval(container._autoPlayInterval);
                 container._videoPlaying = true;
-                // Don't autoplay – wait for user interaction
             } else {
                 container._videoPlaying = false;
                 resetAutoPlay();
@@ -917,11 +915,9 @@
 
         container._resetAutoPlay = resetAutoPlay;
 
-        // Click on slide: if video overlay is visible, let the overlay handle it; otherwise open lightbox
         const slideElements = slides.querySelectorAll('.slider-slide');
         slideElements.forEach((slide, index) => {
             slide.addEventListener('click', function(e) {
-                // If the click target is the play overlay or its SVG, ignore (already handled)
                 if (e.target.closest('.video-play-overlay')) return;
                 openLightbox(getMediaList(), index);
             });
