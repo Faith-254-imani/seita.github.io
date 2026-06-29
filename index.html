@@ -169,6 +169,34 @@
             max-width: calc(100% - 20px);
         }
 
+        /* ---------- PLAY BUTTON OVERLAY ---------- */
+        .video-play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.3);
+            cursor: pointer;
+            z-index: 5;
+            transition: opacity 0.3s;
+        }
+        .video-play-overlay svg {
+            width: 60px;
+            height: 60px;
+            fill: white;
+            opacity: 0.9;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+            transition: transform 0.2s;
+        }
+        .video-play-overlay:hover svg {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        .video-play-overlay.hidden {
+            display: none;
+        }
+
         .slider-dots {
             position: absolute;
             bottom: 10px;
@@ -282,6 +310,10 @@
                 font-size: 30px;
                 padding: 5px;
             }
+            .video-play-overlay svg {
+                width: 45px;
+                height: 45px;
+            }
         }
     </style>
 </head>
@@ -331,7 +363,6 @@
                 </div>
             </div>
             <div class="profile-circle mx-auto lg:mx-0">
-                <!-- High priority for main portrait -->
                 <img src="Passport.png" alt="Faith Seita Portrait" fetchpriority="high" loading="eager">
             </div>
         </div>
@@ -354,27 +385,38 @@
                 <div class="project-image">
                     <div class="slider-container" id="slider1">
                         <div class="slider-slides">
-                            <div class="slider-slide">
-                                <!-- FIRST SLIDE: HIGH PRIORITY -->
-                                <video autoplay muted loop playsinline preload="metadata" poster="https://via.placeholder.com/1600x900/333/fff?text=Raw+Data">
-                                    <source src="raw_data.mp4" type="video/mp4" fetchpriority="high">
+                            <!-- Slide 1: Raw Data Video -->
+                            <div class="slider-slide" data-slide-type="video">
+                                <video muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Raw+Data">
+                                    <source src="raw_data.mp4" type="video/mp4">
                                 </video>
+                                <div class="video-play-overlay" onclick="playVideoInline(this)">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
                                 <span class="slide-label">Raw Messy Data</span>
                             </div>
-                            <div class="slider-slide">
-                                <!-- SLOWER SLIDES: preload="none" + lazy -->
-                                <video autoplay muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Python+Code">
+                            <!-- Slide 2: Python Code Video -->
+                            <div class="slider-slide" data-slide-type="video">
+                                <video muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Python+Code">
                                     <source src="python-datacleaning-code .mp4" type="video/mp4">
                                 </video>
+                                <div class="video-play-overlay" onclick="playVideoInline(this)">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
                                 <span class="slide-label">Python Code for Cleaning</span>
                             </div>
-                            <div class="slider-slide">
-                                <video autoplay muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Cleaned+Data">
+                            <!-- Slide 3: Cleaned Data Video -->
+                            <div class="slider-slide" data-slide-type="video">
+                                <video muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Cleaned+Data">
                                     <source src="cleaned-data.mp4" type="video/mp4">
                                 </video>
+                                <div class="video-play-overlay" onclick="playVideoInline(this)">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
                                 <span class="slide-label">Cleaned Data</span>
                             </div>
-                            <div class="slider-slide">
+                            <!-- Slide 4: Image -->
+                            <div class="slider-slide" data-slide-type="image">
                                 <img src="Kamis Cattle Dashboard.png" alt="Kamis Cattle Dashboard" loading="lazy">
                                 <span class="slide-label">Kamis Cattle Dashboard</span>
                             </div>
@@ -385,6 +427,7 @@
                     </div>
                 </div>
                 <div class="p-6 sm:p-8">
+                    <!-- Project 1 details unchanged -->
                     <div class="flex flex-wrap items-center gap-3 mb-2">
                         <span class="bg-earth/10 text-earth text-xs font-bold px-3 py-1 rounded-full">Python</span>
                         <span class="bg-forest/10 text-forest text-xs font-bold px-3 py-1 rounded-full">Data Cleaning</span>
@@ -421,14 +464,16 @@
                 <div class="project-image">
                     <div class="slider-container" id="slider2">
                         <div class="slider-slides">
-                            <div class="slider-slide">
-                                <!-- FIRST SLIDE: HIGH PRIORITY -->
-                                <video autoplay muted loop playsinline preload="metadata" poster="https://via.placeholder.com/1600x900/333/fff?text=Clean+Finance+Data">
-                                    <source src="Personal Finance Clean.mp4" type="video/mp4" fetchpriority="high">
+                            <div class="slider-slide" data-slide-type="video">
+                                <video muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=Clean+Finance+Data">
+                                    <source src="Personal Finance Clean.mp4" type="video/mp4">
                                 </video>
+                                <div class="video-play-overlay" onclick="playVideoInline(this)">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
                                 <span class="slide-label">Clean Finance Data</span>
                             </div>
-                            <div class="slider-slide">
+                            <div class="slider-slide" data-slide-type="image">
                                 <img src="Personal Finance Dashboard.png" alt="Personal Finance Dashboard" loading="lazy">
                                 <span class="slide-label">Finance Dashboard</span>
                             </div>
@@ -475,12 +520,13 @@
                 <div class="project-image">
                     <div class="slider-container" id="slider3">
                         <div class="slider-slides">
-                            <div class="slider-slide">
-                                <!-- FIRST SLIDE: HIGH PRIORITY -->
-                                <video controls muted loop playsinline preload="metadata" poster="https://via.placeholder.com/1600x900/333/fff?text=JAKE+Financial+Demo">
-                                    <source src="Financial Management System.mp4" type="video/mp4" fetchpriority="high">
-                                    Your browser does not support the video tag.
+                            <div class="slider-slide" data-slide-type="video">
+                                <video muted loop playsinline preload="none" poster="https://via.placeholder.com/1600x900/333/fff?text=JAKE+Financial+Demo">
+                                    <source src="Financial Management System.mp4" type="video/mp4">
                                 </video>
+                                <div class="video-play-overlay" onclick="playVideoInline(this)">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
                                 <span class="slide-label">Financial Management System Demo</span>
                             </div>
                         </div>
@@ -525,7 +571,6 @@
             <!-- ===== PROJECT 4 – Employee Attrition ===== -->
             <div class="project-card">
                 <div class="project-image" onclick="openLightboxFromImage(this.querySelector('img'))">
-                    <!-- HIGH PRIORITY single image -->
                     <img src="Employee-Attrition-Analysis.png" alt="Employee Attrition Dashboard" fetchpriority="high" loading="eager">
                 </div>
                 <div class="p-6 sm:p-8">
@@ -690,6 +735,19 @@
 
 <!-- ==================== SCRIPTS ==================== -->
 <script>
+    // ---------- Click-to-play inline video ----------
+    function playVideoInline(overlay) {
+        const slide = overlay.parentElement;
+        const video = slide.querySelector('video');
+        if (!video) return;
+        // Load and play
+        video.preload = 'auto';
+        video.load();
+        video.play().catch(() => {});
+        overlay.classList.add('hidden');
+    }
+
+    // Count-up animation
     document.addEventListener('DOMContentLoaded', function () {
         const counters = document.querySelectorAll('.countup');
         const duration = 1500;
@@ -709,6 +767,7 @@
         });
     });
 
+    // Lightbox
     const lightbox = document.getElementById('lightbox');
     const lightboxMediaContainer = document.getElementById('lightbox-media-container');
     let currentMediaList = [];
@@ -779,6 +838,7 @@
         if (Math.abs(diff) > 50) navigateLightbox(diff > 0 ? 1 : -1);
     });
 
+    // ---------- Sliders (updated for click-to-play) ----------
     function initSlider(sliderId) {
         const container = document.getElementById(sliderId);
         if (!container) return;
@@ -828,8 +888,7 @@
             if (newVideo) {
                 clearInterval(container._autoPlayInterval);
                 container._videoPlaying = true;
-                newVideo.muted = true;
-                newVideo.play().catch(() => {});
+                // Don't autoplay – wait for user interaction
             } else {
                 container._videoPlaying = false;
                 resetAutoPlay();
@@ -858,10 +917,12 @@
 
         container._resetAutoPlay = resetAutoPlay;
 
+        // Click on slide: if video overlay is visible, let the overlay handle it; otherwise open lightbox
         const slideElements = slides.querySelectorAll('.slider-slide');
         slideElements.forEach((slide, index) => {
             slide.addEventListener('click', function(e) {
-                if (e.target.closest('button')) return;
+                // If the click target is the play overlay or its SVG, ignore (already handled)
+                if (e.target.closest('.video-play-overlay')) return;
                 openLightbox(getMediaList(), index);
             });
         });
@@ -870,13 +931,6 @@
         const nextBtn = container.querySelector('.slider-next');
         if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); container._videoPlaying = false; prevSlide(); });
         if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); container._videoPlaying = false; nextSlide(); });
-
-        container.addEventListener('ended', function(e) {
-            if (e.target.tagName === 'VIDEO') {
-                container._videoPlaying = false;
-                resetAutoPlay();
-            }
-        }, true);
 
         resetAutoPlay();
     }
