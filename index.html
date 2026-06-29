@@ -354,7 +354,6 @@
                     <div class="slider-container" id="slider1">
                         <div class="slider-slides">
                             <div class="slider-slide">
-                                <!-- Fast metadata preload -->
                                 <video autoplay muted loop playsinline preload="metadata" poster="https://via.placeholder.com/1600x900/333/fff?text=Raw+Data">
                                     <source src="raw_data.mp4" type="video/mp4">
                                 </video>
@@ -362,6 +361,7 @@
                             </div>
                             <div class="slider-slide">
                                 <video autoplay muted loop playsinline preload="metadata" poster="https://via.placeholder.com/1600x900/333/fff?text=Python+Code">
+                                    <!-- UPDATED filename with space -->
                                     <source src="python-datacleaning-code .mp4" type="video/mp4">
                                 </video>
                                 <span class="slide-label">Python Code for Cleaning</span>
@@ -444,20 +444,20 @@
                     </div>
                     <h3 class="text-xl sm:text-2xl font-bold text-forest mt-3">Personal Finance Analysis &amp; Budget Optimization</h3>
                     <p class="text-muted mt-3 leading-relaxed">
-                        <strong>Overview:</strong> Developed a dynamic personal financial tracker to analyze income sources, daily expenditures, and monthly spending trends.
+                        <strong>Overview:</strong> Developed a dynamic personal financial tracker to analyze income sources, daily expenditures, and monthly spending trends to drive better savings habits.
                     </p>
                     <ul class="mt-4 space-y-2 text-sm text-muted">
                         <li class="flex items-start gap-2">
                             <span class="text-earth font-bold mt-0.5">▸</span>
-                            <strong>Problem:</strong> The user struggled with poor spending habits and lacked a reliable tracking system.
+                            <strong>Problem:</strong> The user struggled with poor spending habits and lacked a reliable tracking system, making it impossible to audit cash flow, identify waste, or understand true spending behavior.
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-earth font-bold mt-0.5">▸</span>
-                            <strong>Solution:</strong> Utilized Excel Power Query to ingest and clean raw financial transactions; built an interactive Tableau dashboard.
+                            <strong>Solution:</strong> Utilized Excel Power Query to ingest, clean, and structure raw financial transactions. Engineered data models to track day‑of‑week and monthly patterns, then built an interactive Tableau dashboard for continuous financial monitoring.
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-earth font-bold mt-0.5">▸</span>
-                            <strong>Impact:</strong> Pinpointed Thursday spending anomaly (avg 16,020 annually), August as peak spending month, validated savings of 37,413.
+                            <strong>Impact:</strong> Pinpointed a major spending anomaly on Thursdays (averaging 16,020 annually), identified August as the peak spending month, and validated strong baseline savings of 37,413. Provided strategic advice to enforce strict budget limits on Thursdays and during August to preserve cash.
                         </li>
                     </ul>
                     <div class="mt-6 flex gap-4">
@@ -495,20 +495,20 @@
                     </div>
                     <h3 class="text-xl sm:text-2xl font-bold text-forest mt-3">Seita Financial Management System</h3>
                     <p class="text-muted mt-3 leading-relaxed">
-                        <strong>Overview:</strong> A full‑stack personal finance dashboard that ingests M‑Pesa statements and provides AI‑powered spending insights.
+                        <strong>Overview:</strong> A full‑stack personal finance dashboard that ingests M‑Pesa statements, categorizes transactions, and provides AI‑powered spending insights.
                     </p>
                     <ul class="mt-4 space-y-2 text-sm text-muted">
                         <li class="flex items-start gap-2">
                             <span class="text-earth font-bold mt-0.5">▸</span>
-                            <strong>Problem:</strong> Raw M‑Pesa statements are difficult to interpret; users have no way to track spending patterns.
+                            <strong>Problem:</strong> Raw M‑Pesa statements are difficult to interpret; users have no way to track spending patterns, identify wasteful habits, or generate actionable budgets.
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-earth font-bold mt-0.5">▸</span>
-                            <strong>Solution:</strong> Built a Flask web application with an interactive dashboard and AI chat assistant.
+                            <strong>Solution:</strong> Built a Flask web application with an interactive dashboard that automatically parses uploaded statements, computes monthly overviews, spending breakdowns, income sources, and weekday trends. Integrated an AI chat assistant that answers financial questions using the same data.
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-earth font-bold mt-0.5">▸</span>
-                            <strong>Impact:</strong> Flagged Friday as highest‑spending day, September as peak spending month, validated savings rate of 28,545 KES.
+                            <strong>Impact:</strong> Delivered instant visibility into spending habits: flagged Friday as the highest‑spending day, September as the peak spending month, and validated a savings rate of 28,545 KES. The AI assistant provides on‑demand recommendations, helping users enforce tighter budgets and improve financial health.
                         </li>
                     </ul>
                     <div class="mt-6 flex gap-4">
@@ -532,20 +532,20 @@
                     </div>
                     <h3 class="text-xl sm:text-2xl font-bold text-forest mt-3">Employee Attrition Analysis &amp; Retention Strategy</h3>
                     <p class="text-muted mt-3 leading-relaxed">
-                        <strong>Overview:</strong> Data‑driven investigation into key drivers of employee turnover using a public HR dataset.
+                        <strong>Overview:</strong> A data‑driven investigation into the key drivers of employee turnover using a public HR dataset, with the goal of helping HR teams transition from reactive to proactive retention strategies.
                     </p>
                     <ul class="mt-4 space-y-2 text-sm text-muted">
                         <li class="flex items-start gap-2">
                             <span class="text-earth font-bold mt-0.5">▸</span>
-                            <strong>Problem:</strong> Rising attrition increasing recruitment costs; HR lacked clear picture of affected departments.
+                            <strong>Problem:</strong> Rising employee attrition was increasing recruitment costs and reducing productivity. The HR department lacked a clear picture of which departments, demographics, and income brackets were most affected, making it impossible to design targeted interventions.
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-earth font-bold mt-0.5">▸</span>
-                            <strong>Solution:</strong> Cleaned and standardized Kaggle HR dataset in Excel, built interactive Power BI dashboard.
+                            <strong>Solution:</strong> Cleaned and standardized a Kaggle HR dataset in Excel, then built an interactive Power BI dashboard with KPIs, department‑wise attrition visuals, and income‑vs‑satisfaction analysis. The dashboard visualised total employees, attrition rate, average tenure, overtime percentage, and average monthly income.
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-earth font-bold mt-0.5">▸</span>
-                            <strong>Impact:</strong> Identified Sales and R&D as highest‑attrition departments; recommended salary restructuring and retention programmes.
+                            <strong>Impact:</strong> Identified Sales and R&D as the highest‑attrition departments, revealed that low income and job satisfaction were strong turnover predictors, and found that married employees and males exhibited higher attrition rates. Recommended salary restructuring, targeted retention programmes, and continuous KPI monitoring to cut attrition and save costs.
                         </li>
                     </ul>
                     <div class="mt-6 flex gap-4">
