@@ -30,6 +30,7 @@
 
         .font-heading { font-weight: 800; }
 
+        /* ... all the custom utility classes unchanged ... */
         .bg-cream { background-color: var(--cream); }
         .bg-forest { background-color: var(--forest); }
         .bg-earth { background-color: var(--earth); }
@@ -267,7 +268,7 @@
                 </div>
             </div>
             <div class="profile-circle flex-shrink-0">
-                <!-- REPLACED: images/Passport.png → placeholder -->
+                <!-- Your passport photo (put Passport.png in the same folder) -->
                 <img src="Passport.png" alt="Faith Seita Portrait">
             </div>
         </div>
@@ -285,28 +286,34 @@
 
         <div class="flex flex-col gap-6 max-w-7xl mx-auto">
 
-            <!-- ===== PROJECT 1 ===== -->
+            <!-- ===== PROJECT 1 – Cattle Market ===== -->
             <div class="project-card">
                 <div class="project-image">
                     <div class="slider-container" id="slider1">
                         <div class="slider-slides">
+                            <!-- Slide 1: Raw data video -->
                             <div class="slider-slide">
-                                <!-- REPLACED: video src="images/raw-data.mp4" → placeholder image -->
-                                <img src="raw_data.mp4" alt="Raw Messy Data">
+                                <video autoplay muted loop preload="auto" poster="https://via.placeholder.com/1600x900/333/fff?text=Raw+Data">
+                                    <source src="raw_data.mp4" type="video/mp4">
+                                </video>
                                 <span class="slide-label">Raw Messy Data</span>
                             </div>
+                            <!-- Slide 2: Python cleaning code video -->
                             <div class="slider-slide">
-                                <!-- REPLACED: video src="images/python-datacleaning-code.mp4" → placeholder -->
-                                <img src="https://via.placeholder.com/1600x900/333/fff?text=Python+Cleaning+Code" alt="Python Cleaning Code">
+                                <video autoplay muted loop preload="auto" poster="https://via.placeholder.com/1600x900/333/fff?text=Python+Code">
+                                    <source src="python-datacleaning-code.mp4" type="video/mp4">
+                                </video>
                                 <span class="slide-label">Python Code for Cleaning the Data</span>
                             </div>
+                            <!-- Slide 3: Cleaned data video -->
                             <div class="slider-slide">
-                                <!-- REPLACED: video src="images/cleaned-data.mp4" → placeholder -->
-                                <img src="python-datacleaning-code .mp4" alt="Cleaned Data">
+                                <video autoplay muted loop preload="auto" poster="https://via.placeholder.com/1600x900/333/fff?text=Cleaned+Data">
+                                    <source src="cleaned-data.mp4" type="video/mp4">
+                                </video>
                                 <span class="slide-label">Cleaned Data</span>
                             </div>
+                            <!-- Slide 4: Dashboard image -->
                             <div class="slider-slide">
-                                <!-- REPLACED: img src="images/Kamis Cattle Dashboard.png" → placeholder -->
                                 <img src="Kamis Cattle Dashboard.png" alt="Kamis Cattle Data Dashboard">
                                 <span class="slide-label">Kamis Cattle Data Dashboard</span>
                             </div>
@@ -348,18 +355,20 @@
                 </div>
             </div>
 
-            <!-- ===== PROJECT 2 ===== -->
+            <!-- ===== PROJECT 2 – Personal Finance ===== -->
             <div class="project-card">
                 <div class="project-image">
                     <div class="slider-container" id="slider2">
                         <div class="slider-slides">
+                            <!-- Slide 1: Clean finance video -->
                             <div class="slider-slide">
-                                <!-- REPLACED: video src="images/Personal Finance Clean.mp4" → placeholder -->
-                                <img src="Personal Finance Clean.mp4" alt="Clean Personal Finance Data">
+                                <video autoplay muted loop preload="auto" poster="https://via.placeholder.com/1600x900/333/fff?text=Clean+Finance+Data">
+                                    <source src="Personal Finance Clean.mp4" type="video/mp4">
+                                </video>
                                 <span class="slide-label">Clean Personal Finance Data</span>
                             </div>
+                            <!-- Slide 2: Dashboard image -->
                             <div class="slider-slide">
-                                <!-- REPLACED: img src="images/Personal Finance Dashboard.png" → placeholder -->
                                 <img src="Personal Finance Dashboard.png" alt="Personal Finance Dashboard">
                                 <span class="slide-label">Personal Finance Dashboard</span>
                             </div>
@@ -406,9 +415,12 @@
                 <div class="project-image">
                     <div class="slider-container" id="slider3">
                         <div class="slider-slides">
+                            <!-- Financial system demo video -->
                             <div class="slider-slide">
-                                <!-- REPLACED: video src="images/Financial Mangement System.mp4" → placeholder -->
-                                <img src="Financial Management System.mp4" alt="Financial Management System Demo">
+                                <video controls muted loop preload="auto" poster="https://via.placeholder.com/1600x900/333/fff?text=JAKE+Financial+Demo">
+                                    <source src="Financial Management System.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                                 <span class="slide-label">Financial Management System Demo</span>
                             </div>
                         </div>
@@ -453,7 +465,6 @@
             <!-- ===== PROJECT 4 – Employee Attrition ===== -->
             <div class="project-card">
                 <div class="project-image">
-                    <!-- REPLACED: img src="images/Employee-Attrition-Analysis.png" → placeholder -->
                     <img src="Employee-Attrition-Analysis.png" alt="Employee Attrition Dashboard">
                 </div>
                 <div class="p-8">
